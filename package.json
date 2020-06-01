@@ -4,12 +4,14 @@
   "description": "app to population redis",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start-store": "node --expose-gc index-store",
+    "start-product": "node --max-old-space-size=8192 index-product"
   },
   "author": "felipe brandelli",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "moment": "^2.26.0",
     "redis": "^3.0.2"
   }
 }
